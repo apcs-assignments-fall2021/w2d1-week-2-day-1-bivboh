@@ -2,17 +2,30 @@ public class MyMain {
     // Takes two Strings as input, and returns a String equal to the first half
     // of the shorter String plus the second half of the longer String.
     public static String halfAdder(String str1, String str2) {
-        // REPLACE THIS WITH YOUR CODE
-        return "";
-    }
+        int x = (str1.length() / 2);
+        int y = (str2.length() / 2);
+        if (str1.length() > str2.length()) {
+            String new_string = (str1.substring(x));
+            String new_2 = (str2.substring(0, y));
+            return (new_2 + new_string);
 
+        } else {
+            String new_string = (str1.substring(0, x));
+            String new_2 = (str2.substring(y));
+            return (new_string + new_2);
+        }
+    }
     // Takes a String as input, and returns true if the String contains an 'A' or 'a'
     // and returns false otherwise
     public static boolean checkIfA(String str) {
-        // REPLACE THIS WITH YOUR CODE
-        return false;
+        if (str.indexOf(("a")) != 1) {
+            return true;
+        }else if (str.indexOf("A") != 1){
+                return true;
+        }else{
+            return false;
+        }
     }
-
     //  Takes in two Strings as input and returns a String equal to those two Strings added
     //  together in alphabetic order.
     public static String stringOrder(String str1, String str2) {
